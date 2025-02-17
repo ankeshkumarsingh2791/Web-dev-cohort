@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>BMI</title>
+</head>
+<body>
+    <div class="w-full bg-blue-400 text-white h-screen flex flex-col justifiy-center item-center">
+        <div style="display: flex; align-items: center;"  class="bg-blue-800 h-[450px] p-20 flex-col rounded-xl m-10 flex gap-4  ">
+                <h1 class=" font-medium text-4xl text-center">Body Mass Index Calculator</h1>
+                <div style="width: 300px; padding: 20px ; display: flex; align-items: center; " class=" flex-col gap-5 item-center rounded-xl  justifiy-center ml-10 border-2 ">
+
+                    <div>
+                        <h2>Your Hight ( M )</h2>
+                        <input id="height" class="p-2 rounded-md outline-none border-2 border-black text-gray-800" type="number" placeholder="Enter your height " />
+                    </div>
+                    <div>
+                        <h2>Your Weight ( KG )</h2>
+                        <input id="weight" class="p-2 rounded-md outline-none border-2 border-black text-gray-800" type="number" placeholder="Enter your height " />
+                    </div>
+                    <button id="calculate" class="w-32 p-2 rounded-xl text-black  bg-white">Calculate</button>
+                    <h1 id="show" class="show">Your bmi is : </h1>
+                </div>
+        </div>
+
+    </div>
+    <script src="bmi.js"></script>
+    
+</body>
+</html>
