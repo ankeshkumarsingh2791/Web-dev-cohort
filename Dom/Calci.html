@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body class="bg-blue-300 flex justify-center items-center h-screen">
+    <div class="w-80 p-6 bg-white rounded-lg shadow-lg">
+        <!-- Display -->
+        <div class="flex justify-end bg-gray-200 p-4 rounded-t-lg text-xl font-semibold">
+            <div id="display">
+                0
+            </div>
+        </div>
+        
+        <!-- Calculator Buttons -->
+        <div class="grid grid-cols-4 gap-4 mt-4">
+            <!-- Row 1 -->
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">AC</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">X</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">+/-</button>
+            <button class="p-4 bg-orange-500 rounded-lg text-lg text-white hover:bg-orange-600">/</button>
+
+            <!-- Row 2 -->
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">7</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">8</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">9</button>
+            <button class="p-4 bg-orange-500 rounded-lg text-lg text-white hover:bg-orange-600">*</button>
+
+            <!-- Row 3 -->
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">4</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">5</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">6</button>
+            <button class="p-4 bg-orange-500 rounded-lg text-lg text-white hover:bg-orange-600">-</button>
+
+            <!-- Row 4 -->
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">1</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">2</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">3</button>
+            <button class="p-4 bg-orange-500 rounded-lg text-lg text-white hover:bg-orange-600">+</button>
+
+            <!-- Row 5 -->
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">%</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">0</button>
+            <button class="p-4 bg-gray-200 rounded-lg text-lg hover:bg-gray-300">.</button>
+            <button class="p-4 bg-orange-500 rounded-lg text-lg text-white hover:bg-orange-600">=</button>
+        </div>
+    </div>
+    <script src="calci.js"></script>
+
+    <!-- <script>
+        // Simple JavaScript functionality to update the display
+        let display = document.getElementById('display');
+        let currentInput = '0';
+        
+        const buttons = document.querySelectorAll('button');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.textContent;
+                
+                if (value === 'AC') {
+                    currentInput = '0';
+                } else if (value === '=') {
+                    try {
+                        currentInput = eval(currentInput).toString();
+                    } catch (error) {
+                        currentInput = 'Error';
+                    }
+                } else if (value === 'X') {
+                    currentInput = currentInput.slice(0, -1) || '0';
+                } else {
+                    if (currentInput === '0' && value !== '.') {
+                        currentInput = value;
+                    } else {
+                        currentInput += value;
+                    }
+                }
+                
+                display.textContent = currentInput;
+            });
+        });
+    </script> -->
+</body>
+</html>
