@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Feed Back</title>
+</head>
+<body>
+    <div class="w-full h-screen bg-gray-500 flex  " >
+        <div class="w-1/2 flex flex-col border-2 rounded-md m-10 justify-center ">
+            <div class="p-10 w-full gap-3 justify-center flex-col flex">
+                <label class=" gap-5">Your Name </label>
+                 <input id="name" class=" w-3/4  outline-none  rounded-md p-1 border-2 border-gray-600 " type="text" placeholder="Enter your name" />
+                
+            </div>
+            <div class="px-10 gap-3 justify-center flex-col flex">
+                <label class=" gap-5">Your View </label>
+                <textarea id="description" class=" w-3/4  outline-none  rounded-md p-1 border-2 border-gray-600 ">
+
+                </textarea>
+                
+            </div>
+            <div class="rating flex justify-center items-center space-x-1">
+                <span class="star text-4xl cursor-pointer text-gray-300" data-value="1">&#9733;</span>
+                <span class="star text-4xl cursor-pointer text-gray-300" data-value="2">&#9733;</span>
+                <span class="star text-4xl cursor-pointer text-gray-300" data-value="3">&#9733;</span>
+                <span class="star text-4xl cursor-pointer text-gray-300" data-value="4">&#9733;</span>
+                <span class="star text-4xl cursor-pointer text-gray-300" data-value="5">&#9733;</span>
+              </div>
+              <div class="flex justify-center">
+
+                  <button class="border-2 w-20 p-1 rounded-md outline-none">Add</button>
+              </div>
+              
+        </div>
+        <div id="insert" class="w-1/2 flex gap-5 flex-col p-10 text-white font-xl">
+          
+
+        </div>
+
+    </div>
+    <script src="feed.js"></script>
+</body>
+</html>
