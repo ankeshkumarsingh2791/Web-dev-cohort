@@ -1,8 +1,17 @@
+const products = 
+    {
+        name: "Laptop",
+        price: 1000,
+        discount: 10
+    }
+   
 
-const objrct = {
-    name: String,
-    age: Number,
-    grade: String
+function check(products){
+    
+    if(products.hasOwnProperty('discount') && products.discount != null){
+        return true;
+    }
+    return false
 }
 
-console.log(objrct("ankes", 8, "1ts"))
+console.log(check(products))
