@@ -34,7 +34,7 @@ tweet.addEventListener("click", () => {
     window.open(Url, "_blank");
 });
 
-// trying to taking screenshot
+// trying to taking screenshot i am taking help from internet but not working you can ignore here 
 ScreenShot.addEventListener("click", () => {
     html2canvas(quoteBox, { useCORS: true }).then(canvas => {
         const link = document.createElement("a");
